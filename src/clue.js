@@ -1,5 +1,11 @@
 // ITERATION 1
 
+function pickMystery(params) {
+    
+}
+
+
+
 // Suspects Array
 
 const suspectsArray = [
@@ -77,48 +83,47 @@ const roomsArray = [
 name: "Dining Room"
     },
     {
-name: "Dining Room"
+name: "Conservatory"
     },
     {
-name: "Dining Room"
+name: "Kitchen"
     },
     {
-name: "Dining Room"
+name: "Study"
     },
     {
-name: "Dining Room"
+name: "Library"
     },
     {
-name: "Dining Room"
+name: "Billiard Room"
     },
     {
-name: "Dining Room"
+name: "Lounge"
     },
     {
-name: "Dining Room"
+name: "Ballroom"
     },
     {
-name: "Dining Room"
+name: "Hall"
     },
     {
-name: "Dining Room"
+name: "Spa"
     },
     {
-name: "Dining Room"
+name: "Living Room"
     },
     {
-name: "Dining Room"
+name: "Observatory"
     },
     {
-name: "Dining Room"
+name: "Theater"
     },
     {
-name: "Dining Room"
+name: "Guest House"
     },
     {
-name: "Dining Room"
+name: "Patio"
     },
-
 
 ]
 
@@ -137,8 +142,7 @@ const weaponsArray = [
     weight: 2 },
 
     { name: "dumbbell",
-    weight: 30
-    },
+    weight: 30 },
 
     { name: "poison",
     weight: 2 },
@@ -161,15 +165,36 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function name(params) {
+function random(array) {
+
+    return array[Math.floor(Math.random() * array.length)];
     
 }
+
+// console.log(random(weaponsArray[]));
+
+// function selectRandom() {
+
+// let randomSuspect = Math.floor(Math.random() * suspectsArray.length);
+// let randomWeapon = Math.floor(Math.random() * weaponsArray.length);
+// let randomRoom = Math.floor(Math.random() * roomsArray.length);
+
+//     if (weaponsArray.length === 0 || roomsArray.length === 0 || suspectsArray.length === 0) { return (undefined) }
+
+//       }
+      
+//       for (let randomSuspect, randomWeapon, randomRoom of randoms) {
+//         console.log(propiedad + ': ' + persona[propiedad]);
+//       }
+      
 
 
 // ITERATION 3
 
 
-function name(params) {
+function revealMystery(params) {
+
+    // return window.alert("<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!")
     
 }
 
