@@ -8,7 +8,7 @@ function pickMystery(params) {
 
 // Suspects Array
 
-const suspectsArray = [
+let suspectsArray = [
 
     {
       firstName: 'Victor',
@@ -76,7 +76,7 @@ color: "blue"
 
 // Rooms Array
 
-const roomsArray = [
+let roomsArray = [
 
 
     {
@@ -130,7 +130,7 @@ name: "Patio"
 
 // Weapons Array
 
-const weaponsArray = [
+let weaponsArray = [
 
     { name: "rope", 
     weight: 10 },
@@ -165,25 +165,43 @@ const weaponsArray = [
 
 // ITERATION 2
 
-function random(array) {
 
-    return array[Math.floor(Math.random() * array.length)];
+function selectRandom(suspectsArray, weaponsArray, roomsArray) {
+    let randomSuspectIndex = Math.floor(Math.random() * suspectsArray.length);
+    let randomWeaponIndex = Math.floor(Math.random() * weaponsArray.length);
+    let randomRoomIndex = Math.floor(Math.random() * roomsArray.length);
     
+    let randomData = {
+        suspect: suspectsArray[randomSuspectIndex],
+        weapon: weaponsArray[randomWeaponIndex],
+        room: roomsArray[randomRoomIndex]
+    };
+    
+    return randomData;
+
+    function revealMystery() {
+
+
+        return window.alert(`${suspectsArray.firstName} ${suspectsArray.lastName} killed Mr. Boddy using the ${weaponsArray.name} in the ${roomsArray.name}!`)
+         
+     }
+     
 }
 
-// console.log(random(weaponsArray[]));
+const randomData = selectRandom(suspectsArray, weaponsArray, roomsArray);
+console.log(randomData);
 
-// function selectRandom() {
 
-// let randomSuspect = Math.floor(Math.random() * suspectsArray.length);
-// let randomWeapon = Math.floor(Math.random() * weaponsArray.length);
-// let randomRoom = Math.floor(Math.random() * roomsArray.length);
+// ITERATION 3
 
-//     if (weaponsArray.length === 0 || roomsArray.length === 0 || suspectsArray.length === 0) { return (undefined) }
 
-//       }
+
+
+
+
+// if (weaponsArray.length === 0 || roomsArray.length === 0 || suspectsArray.length === 0) { return (undefined) }
       
-//       for (let randomSuspect, randomWeapon, randomRoom of randoms) {
+//       for (let randomSuspect && randomWeapon && randomRoom of random) {
 //         console.log(propiedad + ': ' + persona[propiedad]);
 //       }
       
@@ -192,9 +210,12 @@ function random(array) {
 // ITERATION 3
 
 
-function revealMystery(params) {
+function revealMystery(randomData) {
 
-    // return window.alert("<FIRST NAME> <LAST NAME> killed Mr. Boddy using the <WEAPON> in the <PLACE>!")
+
+   return window.alert(`${suspect.firstName} ${suspectsArray.lastName} killed Mr. Boddy using the ${weaponsArray.name} in the ${roomsArray.name}!`)
     
 }
+
+revealMystery()
 
