@@ -1,8 +1,3 @@
-// ITERATION 1
-
-function pickMystery(params) {
-    
-}
 
 
 
@@ -16,34 +11,34 @@ let suspectsArray = [
       occupation: 'Designer',
       age: 22,
       description: "Billionaire video game designer",
-    image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
-    color: "purple"
-
+      image: "https://66.media.tumblr.com/ee7155882178f73b3781603f0908617c/tumblr_phhxc7EhPJ1w5fh03_540.jpg",
+      color: "purple"
+      
     },
-
+    
     {
-firstName: 'Jacob',
+        firstName: 'Jacob',
 lastName: 'Green',
 occupation: 'Entrepreneur',
 age: 45,
 description: 'He has a lot of connections',
 image: "https://pbs.twimg.com/profile_images/506787499331428352/65jTv2uC.jpeg",
 color: "green"
-    },
+},
 
 {
     firstName: 'Kasandra',
-lastName: 'Scarlet',
-occupation: 'Actor',
-age: 31,
-description: 'She is an A-list movie star with a dark past',
+    lastName: 'Scarlet',
+    occupation: 'Actor',
+    age: 31,
+    description: 'She is an A-list movie star with a dark past',
 image: "https://www.radiotimes.com/uploads/images/Original/111967.jpg",
 color: 'red'
 },
 
 {
-firstName: "Eleanor",
-lastName: "Peacock",
+    firstName: "Eleanor",
+    lastName: "Peacock",
 occupation: "Socialité",
 age: 36,
 description: "She is from a wealthy family and uses her status and money to earn popularity",
@@ -59,9 +54,9 @@ color: "blue"
     description: "He is a former football player who tries to get by on his former glory",
     image: "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/07/04/08/unspecified-3.jpg",
     color: "yellow"
-    },
+},
 
-    {
+{
         firstName: "Doctor",
         lastName: "Orchid",
         occupation: "Scientist",
@@ -69,51 +64,51 @@ color: "blue"
         description: "PhD in plant toxicology. Adopted daughter of Mr. Boddy",
         image: "http://www.radiotimes.com/uploads/images/Original/111967.jpg",
         color: "white"
-        },
+    },
     
-  ];
+];
 
 
 // Rooms Array
 
 let roomsArray = [
-
-
+    
+    
     {
 name: "Dining Room"
-    },
-    {
-name: "Conservatory"
+},
+{
+    name: "Conservatory"
     },
     {
 name: "Kitchen"
     },
     {
 name: "Study"
-    },
+},
     {
 name: "Library"
     },
     {
-name: "Billiard Room"
+        name: "Billiard Room"
     },
     {
-name: "Lounge"
+        name: "Lounge"
     },
     {
-name: "Ballroom"
+        name: "Ballroom"
     },
     {
-name: "Hall"
+        name: "Hall"
     },
     {
-name: "Spa"
+        name: "Spa"
     },
     {
 name: "Living Room"
     },
     {
-name: "Observatory"
+        name: "Observatory"
     },
     {
 name: "Theater"
@@ -122,74 +117,101 @@ name: "Theater"
 name: "Guest House"
     },
     {
-name: "Patio"
+        name: "Patio"
     },
-
+    
 ]
 
 
 // Weapons Array
 
 let weaponsArray = [
-
+    
     { name: "rope", 
     weight: 10 },
     
     { name: "knife", 
     weight: 8 },
-
+    
     { name: "candlestick",
     weight: 2 },
-
+    
     { name: "dumbbell",
     weight: 30 },
-
+    
     { name: "poison",
     weight: 2 },
-
+    
     { name: "axe",
     weight: 15
-    },
-    
-    { name: "bat", 
-    weight: 13 },
-        
-    { name: "trophy",
-    weight: 25 },
+},
 
-    { name: "pistol",
-    weight: 20 },
-    
-  ];
+{ name: "bat", 
+weight: 13 },
 
+{ name: "trophy",
+weight: 25 },
+
+{ name: "pistol",
+weight: 20 },
+
+];
+
+// ITERATION 1
+
+function pickMystery() {
+    
+}
 
 // ITERATION 2
 
+function selectRandom(array) {
 
-function selectRandom(suspectsArray, weaponsArray, roomsArray) {
-    let randomSuspectIndex = Math.floor(Math.random() * suspectsArray.length);
-    let randomWeaponIndex = Math.floor(Math.random() * weaponsArray.length);
-    let randomRoomIndex = Math.floor(Math.random() * roomsArray.length);
+    return array[Math.floor(Math.random() * array.length)];
     
-    let randomData = {
-        suspect: suspectsArray[randomSuspectIndex],
-        weapon: weaponsArray[randomWeaponIndex],
-        room: roomsArray[randomRoomIndex]
-    };
-    
-    return randomData;
-
-    function revealMystery() {
-
-
-        return window.alert(`${suspectsArray.firstName} ${suspectsArray.lastName} killed Mr. Boddy using the ${weaponsArray.name} in the ${roomsArray.name}!`)
-         
-     }
-     
 }
 
-const randomData = selectRandom(suspectsArray, weaponsArray, roomsArray);
-console.log(randomData);
+selectRandom(weaponsArray);
+selectRandom(roomsArray);
+selectRandom(suspectsArray);
+
+console.log(selectRandom(weaponsArray));
+console.log(selectRandom(roomsArray));
+console.log(selectRandom(suspectsArray));
+
+
+
+// function revealMystery() {
+
+
+//     return window.alert(`${suspectsArray.firstName} ${suspectsArray.lastName} killed Mr. Boddy using the ${weaponsArray.name} in the ${roomsArray.name}!`)
+     
+//  }
+
+// function selectRandom(suspectsArray, weaponsArray, roomsArray) {
+//     let randomSuspectIndex = Math.floor(Math.random() * suspectsArray.length);
+//     let randomWeaponIndex = Math.floor(Math.random() * weaponsArray.length);
+//     let randomRoomIndex = Math.floor(Math.random() * roomsArray.length);
+    
+//     let randomData = {
+//         suspect: suspectsArray[randomSuspectIndex],
+//         weapon: weaponsArray[randomWeaponIndex],
+//         room: roomsArray[randomRoomIndex]
+//     };
+    
+//     return randomData;
+    
+//     function revealMystery() {
+
+
+//         return window.alert(`${suspectsArray.firstName} ${suspectsArray.lastName} killed Mr. Boddy using the ${weaponsArray.name} in the ${roomsArray.name}!`)
+         
+//      }
+     
+// }
+
+// const randomData = selectRandom(suspectsArray);
+// console.log(randomData);
 
 
 // ITERATION 3
@@ -205,17 +227,4 @@ console.log(randomData);
 //         console.log(propiedad + ': ' + persona[propiedad]);
 //       }
       
-
-
-// ITERATION 3
-
-
-function revealMystery(randomData) {
-
-
-   return window.alert(`${suspect.firstName} ${suspectsArray.lastName} killed Mr. Boddy using the ${weaponsArray.name} in the ${roomsArray.name}!`)
-    
-}
-
-revealMystery()
 
