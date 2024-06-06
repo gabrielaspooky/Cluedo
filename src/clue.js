@@ -157,13 +157,8 @@ weight: 20 },
 
 ];
 
+
 // ITERATION 1
-
-function pickMystery() {
-    
-}
-
-// ITERATION 2
 
 function selectRandom(array) {
 
@@ -179,52 +174,24 @@ console.log(selectRandom(weaponsArray));
 console.log(selectRandom(roomsArray));
 console.log(selectRandom(suspectsArray));
 
+function pickMystery() {
+
+        let suspect = selectRandom(suspectsArray);
+        let weapon = selectRandom(weaponsArray);
+        let room = selectRandom(roomsArray);
+        return { suspect, weapon, room }
+    } 
+
+pickMystery()
 
 
-// function revealMystery() {
+function revealMystery(envelope) {
 
-
-//     return window.alert(`${suspectsArray.firstName} ${suspectsArray.lastName} killed Mr. Boddy using the ${weaponsArray.name} in the ${roomsArray.name}!`)
+return `${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`
      
-//  }
+}
 
-// function selectRandom(suspectsArray, weaponsArray, roomsArray) {
-//     let randomSuspectIndex = Math.floor(Math.random() * suspectsArray.length);
-//     let randomWeaponIndex = Math.floor(Math.random() * weaponsArray.length);
-//     let randomRoomIndex = Math.floor(Math.random() * roomsArray.length);
-    
-//     let randomData = {
-//         suspect: suspectsArray[randomSuspectIndex],
-//         weapon: weaponsArray[randomWeaponIndex],
-//         room: roomsArray[randomRoomIndex]
-//     };
-    
-//     return randomData;
-    
-//     function revealMystery() {
+console.log(`${envelope.suspect.firstName} ${envelope.suspect.lastName} killed Mr. Boddy using the ${envelope.weapon.name} in the ${envelope.room.name}!`);
 
-
-//         return window.alert(`${suspectsArray.firstName} ${suspectsArray.lastName} killed Mr. Boddy using the ${weaponsArray.name} in the ${roomsArray.name}!`)
-         
-//      }
-     
-// }
-
-// const randomData = selectRandom(suspectsArray);
-// console.log(randomData);
-
-
-// ITERATION 3
-
-
-
-
-
-
-// if (weaponsArray.length === 0 || roomsArray.length === 0 || suspectsArray.length === 0) { return (undefined) }
-      
-//       for (let randomSuspect && randomWeapon && randomRoom of random) {
-//         console.log(propiedad + ': ' + persona[propiedad]);
-//       }
-      
+revealMystery()
 
